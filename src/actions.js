@@ -23,7 +23,7 @@ module.exports = {
 					range: false
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let macro = options.macro;
 				let macroZero = macro - 1;
@@ -53,7 +53,7 @@ module.exports = {
 					choices: self.CHOICES_INPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '00' + options.input.toString(16).padStart(2, '0').toUpperCase();
 				let value = options.assign.toString(16).padStart(2, '0').toUpperCase();
@@ -80,7 +80,7 @@ module.exports = {
 					choices: self.CHOICES_OUTPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00';
 				
@@ -103,7 +103,7 @@ module.exports = {
 					choices: self.CHOICES_INPUTSAUXASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '00' + '11';
 
@@ -134,7 +134,7 @@ module.exports = {
 					]
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '00' + options.pinp.toString(16).padStart(2, '0').toUpperCase();
 
@@ -155,7 +155,7 @@ module.exports = {
 					choices: self.CHOICES_TRANSITION_TYPES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '14' + '00';
 
@@ -176,7 +176,7 @@ module.exports = {
 					choices: self.CHOICES_MIX_TYPES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '14' + '01';
 
@@ -197,7 +197,7 @@ module.exports = {
 					choices: self.CHOICES_WIPE_TYPES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '14' + '03';
 
@@ -218,7 +218,7 @@ module.exports = {
 					choices: self.CHOICES_WIPE_DIRECTIONS
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '14' + '05';
 
@@ -239,7 +239,7 @@ module.exports = {
 					choices: self.CHOICES_SWITCHES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				self.sendCommand(options.switch, '01');
 				setTimeout(function() {
@@ -260,7 +260,7 @@ module.exports = {
 					choices: self.CHOICES_SWITCHES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				self.sendCommand(options.switch, '01');
 			}
@@ -278,7 +278,7 @@ module.exports = {
 					choices: self.CHOICES_SWITCHES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				self.sendCommand(options.switch, '00');
 			}
@@ -303,7 +303,7 @@ module.exports = {
 					choices: self.CHOICES_PINP_KEYS_INPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.pinp.toString(16).padStart(2, '0').toUpperCase() + '03';
 				let value = options.assign.toString(16).padStart(2, '0').toUpperCase();
@@ -330,7 +330,7 @@ module.exports = {
 					choices: self.CHOICES_PINP_TYPES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.pinp.toString(16).padStart(2, '0').toUpperCase() + '04';
 				let value = options.key.toString(16).padStart(2, '0').toUpperCase();
@@ -357,7 +357,7 @@ module.exports = {
 					choices: self.CHOICES_PINP_KEYS_INPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.dsk.toString(16).padStart(2, '0').toUpperCase() + '04';
 				let value = options.assign.toString(16).padStart(2, '0').toUpperCase();
@@ -384,7 +384,7 @@ module.exports = {
 					choices: self.CHOICES_PINP_KEYS_INPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.dsk.toString(16).padStart(2, '0').toUpperCase() + '05';
 				let value = options.assign.toString(16).padStart(2, '0').toUpperCase();
@@ -411,7 +411,7 @@ module.exports = {
 					choices: self.CHOICES_DSK_TYPES
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.dsk.toString(16).padStart(2, '0').toUpperCase() + '06';
 				let value = options.key.toString(16).padStart(2, '0').toUpperCase();
@@ -431,7 +431,7 @@ module.exports = {
 					choices: self.CHOICES_PINP_KEYS_INPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '1B' + '00';
 				let value = options.input.toString(16).padStart(2, '0').toUpperCase();
@@ -451,7 +451,7 @@ module.exports = {
 					choices: self.CHOICES_PINP_KEYS_INPUTSASSIGN
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + '1B' + '01';
 				let value = options.input.toString(16).padStart(2, '0').toUpperCase();
@@ -471,7 +471,7 @@ module.exports = {
 					choices: self.CHOICES_MEMORY
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '0A' + '00' + '00';
 				let value = options.memory.toString(16).padStart(2, '0').toUpperCase();
@@ -491,7 +491,7 @@ module.exports = {
 					choices: self.CHOICES_MEMORY
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '0A' + '00' + '01';
 				let value = options.memory.toString(16).padStart(2, '0').toUpperCase();
@@ -511,7 +511,7 @@ module.exports = {
 					choices: self.CHOICES_MEMORY
 				}
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '0A' + '00' + '02';
 				let value = options.memory.toString(16).padStart(2, '0').toUpperCase();
@@ -538,7 +538,7 @@ module.exports = {
 					choices: self.CHOICES_CAMERA_PAN
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '22';
 				let value = options.direction;
@@ -565,7 +565,7 @@ module.exports = {
 					choices: self.CHOICES_CAMERA_TILT
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '23';
 				let value = options.direction;
@@ -592,7 +592,7 @@ module.exports = {
 					choices: self.CHOICES_CAMERA_PAN_TILT_SPEED
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '24';
 				let value = options.speed;
@@ -619,7 +619,7 @@ module.exports = {
 					choices: self.CHOICES_CAMERA_ZOOM
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '25';
 				let value = options.zoom;
@@ -646,7 +646,7 @@ module.exports = {
 					choices: self.CHOICES_CAMERA_FOCUS
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '26';
 				let value = options.focus;
@@ -676,7 +676,7 @@ module.exports = {
 					]
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '27';
 				let value = options.autofocus;
@@ -703,7 +703,7 @@ module.exports = {
 					choices: self.CHOICES_CAMERA_EXPOSURE
 				},
 			],
-			callback: function(action, bank) {
+			callback: async function(action) {
 				let options = action.options;
 				let address = '00' + options.camera + '28';
 				let value = options.exposure;
