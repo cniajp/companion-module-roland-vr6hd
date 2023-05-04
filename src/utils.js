@@ -111,7 +111,7 @@ module.exports = {
 			self.log('debug', 'Sending: ' + cmd);
 		}
 		
-		if (self.socket !== undefined && self.socket.connected) {	
+		if (self.socket !== undefined && self.socket.isConnected) {	
 			self.socket.send(cmd);
 		}
 		else {
