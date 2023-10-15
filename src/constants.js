@@ -1,5 +1,5 @@
 module.exports = {
-	MODEL: 'VR-120HD',
+	MODEL: 'VR-6HD',
 	VERSION: '',
 	TALLYDATA: [
 		{ id: 0, label: 'HDMI 1', shortlabel: 'hdmi1', status: 0},

@@ -12,7 +12,7 @@ const presets = require('./src/presets')
 const constants = require('./src/constants')
 const utils = require('./src/utils')
 
-class vr120hdInstance extends InstanceBase {
+class vr6hdInstance extends InstanceBase {
 	constructor(internal) {
 		super(internal)
 
@@ -69,4 +69,4 @@ class vr120hdInstance extends InstanceBase {
 	
 }
 
-runEntrypoint(vr120hdInstance, UpgradeScripts)
+runEntrypoint(vr6hdInstance, UpgradeScripts)

@@ -1,6 +1,6 @@
-## Roland VR-120HD
+## Roland VR-6HD
 
-This module will allow you to control a Roland VR-120HD.
+This module will allow you to control a Roland VR-6HD.
 
 ## Configuration
 * Enter the IP address of the device in the configuration settings.

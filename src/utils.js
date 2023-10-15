@@ -133,7 +133,7 @@ module.exports = {
 			self.log('info', 'Sending passcode: ' + self.config.password);
 			self.socket.send(self.config.password + '\n');
 		}
-		else if (data.trim() == 'Welcome to VR-120HD.') {
+		else if (data.trim() == 'Welcome to VR-6HD.') {
 			self.updateStatus(InstanceStatus.Ok);
 			self.log('info', 'Authenticated.');
 			self.sendRawCommand('VER'); //request version info

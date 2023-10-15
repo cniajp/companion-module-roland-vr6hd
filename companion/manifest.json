@@ -1,16 +1,20 @@
 {
-	"id": "roland-vr120hd",
-	"name": "roland-vr120hd",
-	"shortname": "vr120hd",
-	"description": "VR-120HD",
+	"id": "roland-vr6hd",
+	"name": "roland-vr6hd",
+	"shortname": "vr6hd",
+	"description": "VR-6hd",
 	"version": "1.0.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-roland-vr120hd.git",
-	"bugs": "https://github.com/bitfocus/companion-module-roland-vr120hd/issues",
+	"repository": "git+https://github.com/cloudnativedaysjp/companion-module-roland-vr6hd.git",
+	"bugs": "https://github.com/cloudnativedaysjp/companion-module-roland-vr6hd/issues",
 	"maintainers": [
 		{
 			"name": "Joseph Adams",
 			"email": "josephdadams@gmail.com"
+		},
+		{
+			"name": "Kazuto Kusama",
+			"email": "jacopen@gmail.com"
 		}
 	],
 	"legacyIds": [],
@@ -22,7 +26,7 @@
 	},
 	"manufacturer": "Roland",
 	"products": [
-		"VR-120HD"
+		"VR-6hd"
 	],
 	"keywords": [
 		"Video Switcher"

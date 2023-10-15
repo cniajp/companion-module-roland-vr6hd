@@ -1,5 +1,5 @@
 {
-	"name": "roland-vr120hd",
+	"name": "roland-vr6hd",
 	"version": "1.0.1",
 	"main": "index.js",
 	"scripts": {
@@ -7,7 +7,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-roland-vr120hd.git"
+		"url": "git+https://github.com/cloudnativedaysjp/companion-module-roland-vr6hd.git"
 	},
 	"license": "MIT",
 	"dependencies": {

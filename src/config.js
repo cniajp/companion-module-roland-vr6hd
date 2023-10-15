@@ -8,7 +8,7 @@ module.exports = {
 				id: 'info',
 				width: 12,
 				label: 'Information',
-				value: 'This module controls a Roland VR-120HD',
+				value: 'This module controls a Roland VR-6HD',
 			},
 			{
 				type: 'textinput',
